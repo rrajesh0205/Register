@@ -1,0 +1,20 @@
+<html> 
+<head> 
+<title>TodoList</title> 
+</head> 
+<body>
+<header>
+<hr>
+<h1>TodoList</h1>
+<a href="/todos/add">Add Todo</a>
+<hr>
+</header>
+<ul>
+{% for todo in todos %}
+<li> 
+{{todo.title}}:{{todo.text}}
+</li>
+{% endfor %}
+</ul>
+</body> 
+</html> 

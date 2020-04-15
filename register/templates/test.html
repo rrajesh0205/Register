@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="{% static 'css/styletest.css' %}" rel="stylesheet">
+    <title>Output</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <div class="father">
+            Welcome<span>,</span>
+            <b>{{user.first_name}}<span>.</span></b> &nbsp; </br>
+        </div>
+
+        <div class="child">
+            <a href='logout'>Logout<span>.</span></a>
+        </div>
+        
+    {% else %}
+        <div class="father">
+            <a href='/'>Login<span>.</span></a> 
+        </div>
+        
+        <div class="child">
+            <a href='register'>Register<span>.</span></a>
+        </div>
+    {% endif %}
+</body>
+</html>
