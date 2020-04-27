@@ -78,11 +78,12 @@
   {% for post in object_list %}
       <div class="article">
         <h2>{{ post.title }}</h2>
-        <center><img src = {{post.cover.url}} style="width: 50%; " /> </img></center>
-        
-        <h2>{{ post.content }}</h2>
-        <h2>{{ post.created_at }}</h2>
-        <h2>{{ post.updated_at }}</h2>
+          {% if post.cover %}
+              <center><img src = {{post.cover.url}} style="width: 50%; " /> </img></center>
+          {% endif %}
+        <h3>{{ post.content }}</h3>
+        <p>{{ post.created_at }}</p>
+        <p>{{ post.updated_at }}</p>
       </div>
   {% endfor %}
 </div>
