@@ -5,5 +5,6 @@
     <mapping directory="$PROJECT_DIR$/Django" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/example1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/example3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/register" vcs="Git" />
   </component>
 </project>
