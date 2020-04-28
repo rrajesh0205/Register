@@ -2,11 +2,15 @@
 	font-family: 'HelveticaNeueLTPro';
     src: url("../fonts/HelveticaNeueLTPro-Md.woff");
 }
-body,html {
+body{
 	font-family: 'HelveticaNeueLTPro', sans-serif;
   	font-size: 32px;
 	background-color: white;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .father  {
 	position: absolute;
   	left: 50%;
@@ -322,4 +326,29 @@ body
 {
   transform: none;
   
+}
+
+/* Button Top */
+
+.crunchify-top:hover {
+	color: #fff !important;
+	background-color: #ed702b;
+	text-decoration: none;
+}
+ 
+.crunchify-top {
+	display: none;
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	width: 3.2rem;
+	height: 3.2rem;
+	line-height: 3.2rem;
+	font-size: 1.4rem;
+	color: #fff;
+	background-color: #ffc515;/*rgba(0,0,0,0.3);*/
+	text-decoration: none;
+	/*border-radius: 3.2rem;*/
+	text-align: center;
+	cursor: pointer;
 }

@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
     <title>My Blog</title>
 </head>
 
@@ -15,6 +16,10 @@
 <!-- templates/home.html -->
 <body>
 <header>
+    <div class="main" id="section1">
+     <!-- the entire document -->
+    </div>
+
 <div class="myDiv">
     <a href="">This is my Blog</a>
 </div>
@@ -88,5 +93,32 @@
   {% endfor %}
 </div>
 </ul>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+</script>
+ 
+<script>            
+	jQuery(document).ready(function() {
+		var offset = 220;
+		var duration = 500;
+		jQuery(window).scroll(function() {
+			if (jQuery(this).scrollTop() > offset) {
+				jQuery('.crunchify-top').fadeIn(duration);
+			} else {
+				jQuery('.crunchify-top').fadeOut(duration);
+			}
+		});
+ 
+		jQuery('.crunchify-top').click(function(event) {
+			event.preventDefault();
+			jQuery('html, body').animate({scrollTop: 0}, duration);
+			return false;
+		})
+	});
+</script>
 </body>
+<footer>
+<a href="#" class="crunchify-top"><b>↑</b></a>
+</footer>
+
 </html>
