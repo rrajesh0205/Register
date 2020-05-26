@@ -1,0 +1,18 @@
+<!doctype html>
+<head>  
+    <meta charset="UTF-8">  
+    <title>Index</title>  
+</head>  
+<body>
+<form method="POST" class="post-form">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button type="submit" class="save btn btn-default">Save</button>  
+</form>
+<a href='list'>View the list of Students</a>
+{% for student in Students %}
+{{ student.firstname }}
+{{ student.lastname }}
+{% endfor %}
+</body>  
+</html>  
