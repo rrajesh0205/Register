@@ -1,38 +1,29 @@
+{% load static %}
+
+<!DOCTYPE HTML>
 <html>
-<style>
-Html, body{
-          font-family: "Helvetica Neue", Helvetica, sans-serif;
-		height:100%;
-	}
+<head>
+<link rel="stylesheet" href="{% static 'style.css' %}">
 
-	.grandParentContaniner{
-		display:table; height:100%; margin: 0 auto;
-	}
-
-	.parentContainer{
-		display:table-cell; vertical-align:middle;
-	}	
-</style>
+</head>
 <body>
 <n1>
 Hello {{name}} ! </h1>
 <div class="grandParentContaniner">
-<div class="parentContainer">
-
-<form action ='add'>
-     <label for="number1">Enter Number 1:</label> 
-     <input type="text" name="number1">
-     <br>
-     <br>
-     <label for="number2">Enter Number 2:</label>
-     <input type="text" name="number2">
-   
-     </br>
-     </br>
-     <input type="submit">
-     
-</form>
-</div>
+     <div class="parentContainer">
+          <form action ='add' method='post'>
+          {% csrf_token %}
+                    <label for="number1">Enter Number 1:</label> 
+                    <input type="text" name="number1" size="15">
+                    <br>
+                    <br>
+                    <label for="number2">Enter Number 2:</label>
+                    <input type="text" name="number2" size="15">
+                    <br>
+                    <br>
+                    <input type="submit">
+          </form>
+     </div>
 </div>
 </body>
 </html>

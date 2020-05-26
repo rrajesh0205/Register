@@ -3,21 +3,16 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy  
 from .forms import StudentForm
 from .models import Student 
+
   
-def index(request):  
-    student = StudentForm()
-    if request.method == 'POST':
-        student = StudentForm(data=request.POST)
 
-        if student.is_valid():
-            student = student.save()
-            return redirect('/')
-    else:
-        student = StudentForm() 
-    return render(request,"index.html",{'form':student})  
 
-def list(request):
-    Students = Student.objects.all()
-    context = {'Students': Students}
-    return render(request, 'list.html', context)
+def list_and_create(request):
+    form = StudentForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+
+    # notice this comes after saving the form to pick up new objects
+    objects = Student.objects.all()
+    return render(request, 'index.html', {'objects': objects, 'form': form})
     

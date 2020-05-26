@@ -20,7 +20,7 @@ from studentapp import views
 
 urlpatterns = [  
     path('admin/', admin.site.urls),  
-    path('', views.index, name='index'),
-    path('list', views.list, name='list'),
+    path('', views.list_and_create, name='index'),
+    
       
 ]  

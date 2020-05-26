@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <title>My Blog</title>
 </head>
 
@@ -61,22 +61,6 @@
 </nav>
 
 
-
-
-<!--
-<nav>
-<div class="topnav">
-  <a class="active" href='/'>Home</a>
-  <a href='create'>Create</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-</div>
-</nav>
--->
-</br>
-
-
-
 <div class="container">
 
 <ul>
@@ -84,18 +68,23 @@
       <div class="article">
         <h2>{{ post.title }}</h2>
           {% if post.cover %}
-              <center><img src = {{post.cover.url}} style="width: 50%; " /> </img></center>
+              <center><img src = {{post.cover.url}} style="width: 30%; " /> </img></center>
           {% endif %}
         <h3>{{ post.content }}</h3>
         <p>{{ post.created_at }}</p>
         <p>{{ post.updated_at }}</p>
       </div>
+      </br> 
   {% endfor %}
-</div>
 </ul>
+</br>
+    </ul>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-</script>
+</div>
+
+
+
+
  
 <script>            
 	jQuery(document).ready(function() {
@@ -118,7 +107,8 @@
 </script>
 </body>
 <footer>
-<a href="#" class="crunchify-top"><b>↑</b></a>
+<a href="#" class="crunchify-top">
+    <img src="{% static 'arrow.png' %}" height="30" width="30"></a>
 </footer>
 
 </html>
