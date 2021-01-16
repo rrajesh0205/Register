@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<header>
+<nav>
+    <!--
+<div class="topnav">
+    <a class="active" style="pointer-events: none; display:" href='/'>Home</a>
+    <a href='create/'>Create</a>
+</div>
+-->
+</nav>
+<div class="myDiv">
+    <a href='/'>My Blog </a>
+    <div class="myDiv1">
+        <center>Contact</center>
+    </div>
+</div>
+
+</header>
+<br>
+<!--
+<div class="myDiv">
+    <a href="">My Blog</a>
+</div>
+-->
+
+<!--    Made by Erik Terwan    -->
+<!--   24th of November 2015   -->
+<!--        MIT License        -->
+
+<nav role="navigation">
+  <div id="menuToggle">
+    <!-
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+
+    <input type="checkbox" />
+
+    <!-
+    Some spans to act as a hamburger.
+
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <!-
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+
+    <ul id="menu">
+      <a href='/'>
+          <li>Home</li>
+
+      </a>
+
+    </ul>
+  </div>
+</nav>
+
+
+</header>
+
+<div class="centeredsuccess">    
+    <center>
+    <img src="{% static 'email.png' %}" width = "36" height = "36" style="vertical-align:middle" /> &nbsp;&nbsp; r.rajesh@live.in
+    <br>
+    <img src="{% static 'twitter.png' %}" width = "36" height = "36" style="vertical-align:middle"/> &nbsp;&nbsp; https://twitter.com/rrajesh0205
+    </center>
+</div>
+
+<div class="centeredsuccesscopyright">
+&#169; 2020<b><span>.</span></b>
+Rajesh Ramamoorthy<b><span>.</span></b>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,15 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+{% for object in object_list %}
+    
+        {{ object.menu_name }} </br>
+        {{ object.menu_desc }} </br>
+        <img src = {{object.menu_image.url}} style="width: 50%; " /> </img> </br>
+        {{ object.menu_price }} </br>
+        
+        
+    
+    </br>
+
+{% endfor %}
